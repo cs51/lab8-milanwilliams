@@ -251,6 +251,8 @@ let h6 = "sheep have wool, not hair." ;;
 
 let _ = receive_report h4 ;;
 let _ = receive_report h5 ;;
+let _ = receive_report h6 ;;
+
 
 
 (*......................................................................
@@ -261,10 +263,6 @@ event instead.)
 .........
 
 .............................................................*)
-
-fire_event publish h4;;
-fire_event publish h5;;
-fire_event publish h6;;
 
 print_string "Moved to publication.\n" ;;
 
