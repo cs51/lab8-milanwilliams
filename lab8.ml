@@ -213,8 +213,8 @@ Exercise 7: Remove the newswire listeners that were previously registered.
 
 (* .. *)
 
-let _ = remove_listener newswire fnn.id;;
-let _ = remove_listener newswire bf.id;;
+let _ = remove_listener newswire fnn;;
+let _ = remove_listener newswire bf;;
 
 
 (*......................................................................
@@ -234,7 +234,7 @@ waiting for the publish event.
 ......................................................................*)
 
 let receive_report (s : string) =
-  add_listener publish (fun () -> print_string s) ;;
+  let _ = add_listener publish (fun () -> print_string s) in () ;;
 
 (*......................................................................
 Exercise 10: Register the receieve_report listener to listen for the
@@ -249,8 +249,8 @@ let h4 = "today's top story: memes." ;;
 let h5 = "you can lose 20 pounds in 20 minutes!" ;;
 let h6 = "sheep have wool, not hair." ;;
 
-let _ = receieve_report h4 ;;
-let _ = receieve_report h5 ;;
+let _ = receive_report h4 ;;
+let _ = receive_report h5 ;;
 
 
 (*......................................................................
