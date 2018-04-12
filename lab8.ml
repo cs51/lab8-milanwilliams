@@ -254,7 +254,6 @@ let _ = receive_report h5 ;;
 let _ = receive_report h6 ;;
 
 
-
 (*......................................................................
 Exercise 11: Fire newswire events for these headlines. Notice that (if
 properly implemented), the newswire event doesn't immediately print
@@ -263,6 +262,8 @@ event instead.)
 .........
 
 .............................................................*)
+
+let _ = fire_event publish () ;;
 
 print_string "Moved to publication.\n" ;;
 
